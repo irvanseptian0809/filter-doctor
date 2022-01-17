@@ -4,7 +4,7 @@ export const DOCTORS_FETCH = 'DOCTORS_FETCH'
 export const DOCTORS_FETCH_SUCCESS = 'DOCTORS_FETCH_SUCCESS'
 export const DOCTORS_FETCH_FAILED = 'DOCTORS_FETCH_FAILED'
 
-export interface interfacedoctors {
+export interface interfaceDoctors {
   doctor_id: string,
   name: string,
   slug: string,
@@ -35,7 +35,7 @@ export interface interfacedoctors {
 }
 
 export interface interfacePokemon {
-  data: interfacedoctors[],
+  data: interfaceDoctors[],
   isLoading: boolean,
   isError: boolean,
   errorMessage: string,
@@ -53,7 +53,7 @@ const reducer = createReducer(INITIAL_STATE, {
     ...state,
     isLoading: true,
   }),
-  [DOCTORS_FETCH_SUCCESS]: (state: any, payload: interfacedoctors) => ({
+  [DOCTORS_FETCH_SUCCESS]: (state: any, payload: interfaceDoctors) => ({
     ...state,
     isLoading: false,
     isError: false,
