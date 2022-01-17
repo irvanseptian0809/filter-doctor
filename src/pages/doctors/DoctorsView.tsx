@@ -14,6 +14,7 @@ const DoctorsView = ({
     <Container maxWidth="md">
       <Box>
         Here's the doctor list.
+        {/* Next setup UI doctor list and connecting to the redux */}
       </Box>
     </Container>
   )
